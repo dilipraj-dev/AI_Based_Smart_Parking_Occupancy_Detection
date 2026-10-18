@@ -1,0 +1,41 @@
+{
+  "name": "SmartParkingAI_DarkTheme",
+  "dataColors": [
+    "#F43F5E",
+    "#10B981",
+    "#38BDF8",
+    "#F59E0B",
+    "#818CF8",
+    "#EC4899",
+    "#94A3B8"
+  ],
+  "background": "#080C14",
+  "foreground": "#0E1524",
+  "tableAccent": "#38BDF8",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [
+          {
+            "color": { "solid": { "color": "#0E1524" } },
+            "transparency": 10
+          }
+        ],
+        "border": [
+          {
+            "color": { "solid": { "color": "#1E293B" } },
+            "width": 1,
+            "radius": 8
+          }
+        ],
+        "title": [
+          {
+            "fontColor": { "solid": { "color": "#F8FAFC" } },
+            "fontFamily": "Segoe UI Semibold",
+            "fontSize": 12
+          }
+        ]
+      }
+    }
+  }
+}

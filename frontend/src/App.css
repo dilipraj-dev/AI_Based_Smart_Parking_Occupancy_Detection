@@ -1,0 +1,6 @@
+/* Component-level layout overrides if needed */
+.dashboard-page-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}

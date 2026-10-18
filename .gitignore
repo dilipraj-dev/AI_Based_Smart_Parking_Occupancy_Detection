@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Node.js
+node_modules/
+frontend/node_modules/
+dist/
+build/
+.vite/
+
+# Generated files
+.DS_Store
+*.log
+outputs/
+*.tmp
+.ipynb_checkpoints/
+
+# Editors
+.vscode/
+.idea/
+
+# Datasets and trained model files
+dataset/
+models/
+
+# Large generated artifacts
+outputs/
+*.pt
+*.pth
+*.onnx
+*.h5
+*.keras
+*.weights

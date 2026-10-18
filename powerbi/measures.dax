@@ -1,0 +1,48 @@
+// ==============================================================================
+// Smart Parking AI — Power BI DAX Measures Definition
+// Table Name: parking_occupancy
+// Data Source: outputs/powerbi/parking_occupancy.csv
+// ==============================================================================
+
+// 1. Total Slots: Count of analyzed parking bays in the facility
+Total Slots = 
+COUNTROWS('parking_occupancy')
+
+// 2. Occupied Slots: Number of bays classified as OCCUPIED by MobileNetV2
+Occupied Slots = 
+CALCULATE(
+    COUNTROWS('parking_occupancy'),
+    'parking_occupancy'[Status] = "OCCUPIED"
+)
+
+// 3. Vacant Slots: Number of bays classified as VACANT by MobileNetV2
+Vacant Slots = 
+CALCULATE(
+    COUNTROWS('parking_occupancy'),
+    'parking_occupancy'[Status] = "VACANT"
+)
+
+// 4. Occupancy %: Active vehicle occupancy ratio
+// Format as Percentage (e.g. 55.10%)
+Occupancy % = 
+DIVIDE(
+    [Occupied Slots],
+    [Total Slots],
+    0
+)
+
+// 5. Average Confidence: Average prediction confidence of MobileNetV2 model
+// Confidence in CSV is 0.00 to 100.00; divide by 100 and format as Percentage (0.00%)
+Average Confidence = 
+DIVIDE(
+    AVERAGE('parking_occupancy'[Confidence]),
+    100,
+    0
+)
+
+// 6. Formatted Metadata Measures
+Facility Name = 
+SELECTEDVALUE('parking_occupancy'[Parking_Lot], "Parking Lot 5")
+
+Last Analysis Timestamp = 
+MAX('parking_occupancy'[Date]) & " " & MAX('parking_occupancy'[Time])

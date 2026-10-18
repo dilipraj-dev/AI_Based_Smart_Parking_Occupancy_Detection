@@ -1,0 +1,4 @@
+split,vacant,occupied,total
+train,187,445,632
+validation,23,81,104
+test,63,103,166
