@@ -224,8 +224,8 @@ Smart-Parking-AI/
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/your-username/Smart-Parking-AI.git
-cd Smart-Parking-AI
+git clone https://github.com/dilipraj-dev/AI-Based-Smart-Parking-Occupancy-Detection.git
+cd AI-Based-Smart-Parking-Occupancy-Detection
 ```
 
 ### Step 2: Configure Python Virtual Environment
